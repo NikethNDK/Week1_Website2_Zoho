@@ -1,0 +1,365 @@
+.backgroundimg{
+    background-image: url(./Images/zcorpbanner.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh; 
+}
+/* Main Div section comprising of the logo header and the bullets */
+/* for the header and logo section  */
+.headernlogo{
+    text-align: center;
+    padding-top: 80px;
+}
+ 
+.headernlogo a{
+    text-decoration: none;
+    color: white;
+}
+
+.headernlogo a h1{
+    width: 500px;
+    margin: auto;
+    font-size: clamp(18px, 8vh, 60px);
+    padding: 10px;
+}
+
+.logo img{
+    width: 159px;
+    height: 65px;
+}
+
+.logo h1{
+    font-size: 60px;
+    cursor: default;
+}
+/* end of section logo and the header text with image */
+/* Bullet points in the headers */
+.header-bullets{   
+    list-style: none;
+}
+.header-bullets li{
+    display: inline-block;
+    margin-right: 20px;
+    padding: 18px;
+    position: relative;
+    
+}
+
+.header-bullets li::before{
+    content: '';
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    background-color: red;
+    border-radius: 50%;
+    margin-left: -20px;
+    top: 40%;
+}
+
+/* for applying color for different bullets */
+.header-bullets li.red::before{
+    background-color: red;
+}
+.header-bullets li.yellow::before{
+    background-color: #FFEB3B;
+}
+.header-bullets li.blue::before{
+    background-color:#64B5F6;
+}
+
+.headerfooter{
+    background-color: aliceblue;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    width: 100%;
+    text-align: right;
+    
+    display:inline-block;
+}
+
+.headerfooter p{
+    font-size: clamp(11px,3vh,16px);
+    margin: 0;
+}
+/* end of the first part of logo background image till the From part */
+
+/* Set brand as fixed */
+/* Note used now */
+.brands{
+    /* position: fixed;
+    top: 0;
+    left: 0; */
+    width: 100%;
+    background: #fff;
+    text-align: center;
+    z-index: 9;
+    padding: 10px;
+    box-shadow: 0px 4px 8px 2px;
+    font-size: 30px;
+    overflow: hidden;
+    font-weight: bold;
+}
+/* till here not used */
+/* background for the first section */
+.section1{
+    background-image: url(./Images/support1.png);
+    background-position: center;
+    background-size: 100px;
+    background-repeat: repeat;
+    background-size: 100px;
+    height: 100vh; 
+    padding: 120px 90px 40px 90px;
+    position: relative;
+    padding-bottom: 250px; /* Adds extra space at the bottom */ 
+}
+.section1 h2{
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 40px;
+
+}
+/* for the text and icons inside the yellow box */
+.section1-content{
+    position: absolute;
+    padding:40px 40px ;
+    height: 500px;
+    width: 55%;
+    background-color: #ffdd2b;
+    margin: auto;
+    transform: translate(30%);
+   
+}
+
+/* Responsive adjustments for the first section with yellow background and zoho logo box*/
+@media (max-width: 768px) {
+    .section1-content {
+        width: 90%; 
+        padding: 20px; 
+        transform: translate(-50%, 0); 
+        max-height: none; 
+        visibility: visible;
+    }
+
+    .section1 {
+        padding: 100px 20px 20px 20px;
+        padding-bottom: 150px; 
+    }
+
+    .section1 h2 {
+        font-size: 1.5rem; 
+        margin-bottom: 20px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .section1-content {
+        width: 100%; 
+        height: 100vh;
+        padding: 15px; 
+        left: 0;
+        visibility: visible;
+        transform: translate(0,0); 
+    }
+
+    .section1 h2 {
+        font-size: 1.2rem; 
+    }
+}
+
+/* media query ends for the section 1 */
+
+.section1-content p{
+    max-width: 542px;
+    padding: 70px 50px 50px;
+    font-size: clamp(6px,5vh,22px);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-bottom: 20px;
+}
+/* code for the white block in the yellow containe under the brands */
+.section1-zoho-and-caption{
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    width: 300px;
+    height: 300px;
+    top: 48%;
+    left: 68%;
+    transform: translateY(-70%,-50%);
+    /* bottom: 90px;
+    right: 210px; */
+    box-shadow: 0 0 16px 3px rgba(136, 136, 136, 0.121);
+    text-align: center;
+}
+/* to contril when the screen size is reduced */
+@media (max-width: 768px) {
+    .section1 {
+        flex-direction: column;
+    }
+    .section1-content {
+        position: relative;
+        transform: translate(0, 40%);
+        margin-top: 20px;
+    }
+
+    .section1-zoho-and-caption {
+        position: absolute;
+        top: 160px;
+        transform: translate(-70% ,0%);
+        background-color: transparent;
+        box-shadow: 0 0 0 0;
+        /* order: 1;  */
+        width: 350px; 
+        height: 200px; 
+    }
+}
+.subsec-logo img{
+    width: 120px;
+    height: 69px;
+}
+
+.subsec-logo h3{
+    font-size: 17px;   
+}
+
+.products a{
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+   
+}
+.products li{
+    list-style: none;
+    text-align: center;
+    width: auto;
+    max-width: 110px;
+    display: inline-block;
+    margin-right: 55px;
+    
+}
+
+/* main code for setting the size and position of the icon in the yellow bacground area */
+.icon{
+    width: 46px;
+    height: 46px;
+    background-image: url(./Images/zohocorp-icon-sprite.png);
+    display: block;
+    background-repeat: no-repeat;
+    background-size: 600px auto;
+    margin-bottom: 10px;
+}
+
+
+/* positioning the icons on the screen from the file */
+.icon-crm{
+    background-position: 0px 0px;
+}
+.icon-books{
+    background-position: -46px 0px;
+}
+
+.icon-mail{
+    background-position: -92px 0px;
+}
+
+.icon-desk{
+    background-position: -138px 0px;
+}
+
+.icon-iam{
+    background-position: -184px 0px;
+}
+.icon-esm{
+    background-position: -230px 0px;
+}
+.icon-uems{
+    background-position: -276px 0px;
+}
+.icon-iom{
+    background-position: -322px 0px;
+}
+.icon-siem{
+    background-position: -368px 0px;
+}
+.icon-aia{
+    background-position: -414px 0px;
+}
+.icon-lcad{
+    background-position: -460px 0px;
+}
+
+/* customized button in the yellow box */
+.explore-zoho-btn{
+    background-color: #F0483E;
+    color: white;
+    padding:12px;
+    width: 150px;
+    border: none;
+    font-weight: bold;
+    margin: 30px 0px 0px 30px;
+
+}
+/* Section 2 begninning */
+.section2{
+    background-image: url(./Images/support2.png);
+    background-position: center;
+    background-size: 100px;
+    background-repeat: repeat;
+    background-size: 100px;
+    height: 100vh; 
+    padding: 120px 90px 40px 90px;
+    position: relative;
+    padding-bottom: 250px; /* Adds extra space at the bottom */ 
+    color: white;
+
+}
+
+/* for the text and icons inside the yellow box */
+.section2 .section1-content{
+    position: absolute;
+    padding:40px 40px;
+    height: 700px;
+    width: 55%;
+    background-color:#01A768;
+    margin: auto;
+    transform: translate(30%);
+}
+.products ul{
+    max-width: 700px;
+}
+.products li{
+    display: inline-block;
+    max-width: 90px;
+    margin-top: 0;
+    
+    max-height: 60px;
+    
+}
+.products a{
+    color: #fff;
+    display: block;
+    text-align: left;
+    
+}
+
+
+/* end of section css for the manageenigne part */
+/* MAnageEngine Section */
+/* for the manageengine logo inside the green box */
+.ManageEngine{
+    width: 30%;
+    padding: 100px 20px;
+    text-align: center;
+    margin-left: -19%;
+    background: #fff;
+    box-shadow: 0 0 16px 3px rgba(136, 136, 136, 0.121);
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    vertical-align: middle;
+    color: #000;
+}
